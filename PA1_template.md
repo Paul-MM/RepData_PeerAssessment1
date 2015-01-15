@@ -82,23 +82,6 @@ No.NAs <- sum(is.na(activity)) ### count number of NAs
 
 ```r
 library("Hmisc")
-```
-
-```
-## Loading required package: grid
-## Loading required package: lattice
-## Loading required package: survival
-## Loading required package: splines
-## Loading required package: Formula
-## 
-## Attaching package: 'Hmisc'
-## 
-## The following objects are masked from 'package:base':
-## 
-##     format.pval, round.POSIXt, trunc.POSIXt, units
-```
-
-```r
 activity1 <- activity
 activity1$steps <- impute(activity1$steps, fun="random")
 
@@ -116,9 +99,9 @@ meanB <- format(mean(mydata4$steps), scientific=F)
 medianB <- median(mydata4$steps)
 ```
 
-The mean number of step taken with new dataset is 10828.59 which is different from the mean 10766.19 of the original dataset.
+The mean number of step taken with new dataset is 10657.9 which is different from the mean 10766.19 of the original dataset.
 
-The median number of step taken with new dataset is 11015 which is different from the mean 10765 of the original dataset.
+The median number of step taken with new dataset is 10571 which is different from the mean 10765 of the original dataset.
 
 
 
